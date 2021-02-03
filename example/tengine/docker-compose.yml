@@ -1,0 +1,11 @@
+version: '2'
+services:
+  nginx:
+    container_name: "nginx-tengine-lua-upsync"
+    privileged: true
+    image: peter6968/nginx-tengine-lua-upsync:2.3.2
+    ports:
+      - "80:80"
+    volumes:
+      - "$PWD/conf:/etc/nginx"
+    restart: always
